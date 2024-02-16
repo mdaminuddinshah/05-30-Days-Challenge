@@ -1,4 +1,7 @@
-
+img {
+    width: 200px;
+    height: 200px;
+}
 #mr_krab, #spongebob, #patrick {
     width: 70px;
     height: 70px;

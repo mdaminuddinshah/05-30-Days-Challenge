@@ -3,7 +3,7 @@
 const btns = document.getElementById('btns');
 
 const inner = () => {
-    document.getElementById('inner').textContent = 'Aminuddin Shah';
+    document.getElementById('inner').textContent = 'Second';
 }
 
 btns.addEventListener('click', inner);

@@ -3,3 +3,13 @@
     height: 200px;
     border-radius: 100%;
 }
+@media (max-width: 500px){
+    #buttons {
+        font-size: 12px;
+    }
+    #classs {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+}

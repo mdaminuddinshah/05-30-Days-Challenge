@@ -2,6 +2,23 @@
     width: 200px;
     height: 200px;
     border-radius: 100%;
+    
+}
+#mr_krab, #spongebob, #patrick {
+    width: 70px;
+    height: 70px;
+    border-radius: 100%;
+}
+#kotak button {
+    width: 250px;
+}
+
+#text {
+    font-size: 15px;
+    font-weight: bold;
+}
+button {
+    box-shadow: 5px 5px 0 rgba(1,1,1,0.5); 
 }
 @media (max-width: 500px){
     #buttons {
@@ -11,5 +28,12 @@
         display: flex;
         justify-content: center;
         align-items: center;
+    }
+    #kotak {
+        direction: flex;
+        flex-direction: column;
+    }
+    #kotak button {
+        width: 200px;
     }
 }

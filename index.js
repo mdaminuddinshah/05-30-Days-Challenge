@@ -10,48 +10,149 @@ btns.addEventListener('click', inner);
 
 // getAttribute() method
 // img
-const squidwardimg = document.querySelector('#squidward');
+const squidwardimg = document.getElementById('squidward');
+const mr_krab_image = document.getElementById('mr_krab');
+const patrick_image = document.getElementById('patrick');
+const spongebob_img = document.getElementById('spongebob');
+
+console.log(squidwardimg.getAttribute('src'));
 
 // buttons
-const classs = document.getElementById('#classs');
-const srcs =  document.getElementById('#srcs');
-const alts = document.getElementById('#alts');
-const ids = document.getElementById('#ids');
+const classs = document.getElementById('classs');
+const srcs =  document.getElementById('srcs');
+const alts = document.getElementById('alts');
+const ids = document.getElementById('ids');
 
-// attribute
+// attribute squidward
 const getTheValueClass = squidwardimg.getAttribute('class');
 const getTheValueSrc = squidwardimg.getAttribute('src');
 const getTheValueAlt = squidwardimg.getAttribute('alt');
 const getTheValueId = squidwardimg.getAttribute('id');
 
+// attribute mr krab
+const getMrKrabClass = mr_krab_image.getAttribute('class');
+const getMrKrabSrc = mr_krab_image.getAttribute('src');
+const getMrKrabAlt = mr_krab_image.getAttribute('alt');
+const getMrKrabId = mr_krab_image.getAttribute('id');
+
+// attribute patrick
+const getpatrickClass = patrick_image.getAttribute('class');
+const getpatrickSrc = patrick_image.getAttribute('src');
+const getpatrickAlt = patrick_image.getAttribute('alt');
+const getpatrickId = patrick_image.getAttribute('id');
+
+// attribute spongebob
+const getspongebobClass = spongebob_img.getAttribute('class');
+const getspongebobSrc = spongebob_img.getAttribute('src');
+const getspongebobAlt = spongebob_img.getAttribute('alt');
+const getspongebobId = spongebob_img.getAttribute('id');
+
 // p tag
 const resultImg = document.querySelector('#result');
 
 const getClassImg = () => {
-    resultImg.textContent = getTheValueClass;
-    resultImg.style.display = 'block';
-    resultImg.style.backgroundColor = 'black';
+    const currentSrc = squidwardimg.getAttribute('src');
+    
+    if(currentSrc === './images/And when you do decide to study_.jpg'){
+        resultImg.textContent = getTheValueClass;
+        resultImg.style.display = 'block';
+        resultImg.style.backgroundColor = 'black';
+    } else if(currentSrc === './images/Mr_ Krabs money.jpg'){
+        resultImg.textContent = getMrKrabClass;
+        resultImg.style.display = 'block';
+        resultImg.style.backgroundColor = 'black';
+    } else if(currentSrc === './images/When your friend swim without you.jpg'){
+        resultImg.textContent = getspongebobClass;
+        resultImg.style.display = 'block';
+        resultImg.style.backgroundColor = 'black';
+    } else if(currentSrc === './images/When the gas prices up.jpg'){
+        resultImg.textContent = getpatrickClass;
+        resultImg.style.display = 'block';
+        resultImg.style.backgroundColor = 'black';
+    }
 }
 
 const getSrcImg = () => {
-    resultImg.textContent = getTheValueSrc;
-    resultImg.style.display = 'block';
-    resultImg.style.backgroundColor = 'black';
+    currentSrc = squidwardimg.getAttribute('src');
+
+    if(currentSrc === './images/And when you do decide to study_.jpg'){
+        resultImg.textContent = getTheValueSrc;
+        resultImg.style.display = 'block';
+        resultImg.style.backgroundColor = 'black';
+    } else if(currentSrc === './images/Mr_ Krabs money.jpg'){
+        resultImg.textContent = getMrKrabSrc;
+        resultImg.style.display = 'block';
+        resultImg.style.backgroundColor = 'black';
+    } else if(currentSrc === './images/When the gas prices up.jpg'){
+        resultImg.textContent = getpatrickSrc;
+        resultImg.style.display = 'block';
+        resultImg.style.backgroundColor = 'black';
+    } else if(currentSrc === './images/When your friend swim without you.jpg'){
+        resultImg.textContent = getspongebobSrc;
+        resultImg.style.display = 'block';
+        resultImg.style.backgroundColor = 'black';
+    }
 }
 
 
 const getAltImg = () => {
-    resultImg.textContent = getTheValueAlt;
-    resultImg.style.display = 'block';
-    resultImg.style.backgroundColor = 'black';
+    currentSrc = squidwardimg.getAttribute('src');
+
+    if(currentSrc === './images/And when you do decide to study_.jpg'){
+        resultImg.textContent = getTheValueAlt;
+        resultImg.style.display = 'block';
+        resultImg.style.backgroundColor = 'black';
+    } else if(currentSrc === './images/Mr_ Krabs money.jpg'){
+        resultImg.textContent = getMrKrabAlt;
+        resultImg.style.display = 'block';
+        resultImg.style.backgroundColor = 'black';
+    } else if(currentSrc === './images/When the gas prices up.jpg'){
+        resultImg.textContent = getpatrickAlt;
+        resultImg.style.display = 'block';
+        resultImg.style.backgroundColor = 'black';
+    } else if(currentSrc === './images/When your friend swim without you.jpg'){
+        resultImg.textContent = getspongebobAlt;
+        resultImg.style.display = 'block';
+        resultImg.style.backgroundColor = 'black';
+    }
 }
 
 
 const getIdImg = () => {
-    resultImg.textContent = getTheValueId;
-    resultImg.style.display = 'block';
-    resultImg.style.backgroundColor = 'black';
+    currentSrc = squidwardimg.getAttribute('src');
+
+    if(currentSrc === './images/And when you do decide to study_.jpg'){
+        resultImg.textContent = getTheValueId;
+        resultImg.style.display = 'block';
+        resultImg.style.backgroundColor = 'black';
+    } else if(currentSrc === './images/Mr_ Krabs money.jpg'){
+        resultImg.textContent = getMrKrabId;
+        resultImg.style.display = 'block';
+        resultImg.style.backgroundColor = 'black';
+    } else if(currentSrc === './images/When the gas prices up.jpg'){
+        resultImg.textContent = getpatrickId;
+        resultImg.style.display = 'block';
+        resultImg.style.backgroundColor = 'black';
+    } else if(currentSrc === './images/When your friend swim without you.jpg'){
+        resultImg.textContent = getspongebobId;
+        resultImg.style.display = 'block';
+        resultImg.style.backgroundColor = 'black';
+    };
 }
 
+// setAttribute() method
+    const patrickImg = './images/When the gas prices up.jpg';
+    const spongebobImg = './images/When your friend swim without you.jpg';
+    const mrKrab = "./images/Mr_ Krabs money.jpg";
+
+    const mr_krab_click = () => {
+        squidwardimg.setAttribute('src', mrKrab);
+    }
+    const patrickClick = () => {
+        squidwardimg.setAttribute('src', patrickImg);
+    }
+    const spongebobClick = () => {
+        squidwardimg.setAttribute('src', spongebobImg);
+    }
 
 

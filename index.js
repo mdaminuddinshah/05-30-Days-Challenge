@@ -160,3 +160,23 @@ const getIdImg = () => {
 const fruits = ['apple', 'orange', 'banana', 'pear'];
 console.log(fruits);
 
+// length of array index = start from 0
+const fruitsLength = fruits.length;
+console.log(fruitsLength);
+
+// pop method = pop() method delete last index
+fruits.pop();
+console.log(fruits)
+
+// push method = push('value') method is add new last index to array
+fruits.push('watermelon');
+
+
+
+// array index
+console.log(fruits[0]);
+console.log(fruits[1]);
+console.log(fruits[2]);
+console.log(fruits[3]);
+console.log(fruits[4]);
+

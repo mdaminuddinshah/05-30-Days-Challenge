@@ -156,3 +156,7 @@ const getIdImg = () => {
     }
 
 
+// array
+const fruits = ['apple', 'orange', 'banana', 'pear'];
+console.log(fruits);
+

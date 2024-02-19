@@ -160,18 +160,17 @@ const getIdImg = () => {
 const fruits = ['apple', 'orange', 'banana', 'pear'];
 console.log(fruits);
 
-// length of array index = start from 0
+// length of array element
 const fruitsLength = fruits.length;
 console.log(fruitsLength);
 
-// pop method = pop() method delete last index
+// pop method = pop() method delete last element
 fruits.pop();
 console.log(fruits)
+console.log(fruitsLength);
 
-// push method = push('value') method is add new last index to array
+// push method = push('value') method is add to last element to array
 fruits.push('watermelon');
-
-
 
 // array index
 console.log(fruits[0]);
@@ -180,3 +179,51 @@ console.log(fruits[2]);
 console.log(fruits[3]);
 console.log(fruits[4]);
 
+const array2 = [1,2,3,4,5];
+console.log(array2.length);
+console.log(array2);
+console.log(array2[4]);
+array2.pop();
+console.log(array2[5]);
+console.log(array2);
+console.log(array2.length);
+
+// shift() method = delete first element of array
+const arrayShift = [1,2,3,4,5];
+const deleteShift = arrayShift.shift();
+console.log(arrayShift);
+console.log(arrayShift.length);
+console.log(deleteShift);
+
+// unshifft() method = add new element to first index of array
+const array3 = [2,3,4,5];
+const addUnshift = array3.unshift(0,1);
+console.log(array3);
+console.log(addUnshift);
+
+// concat() method
+const concat1 = [1,2,3,4,5];
+const concat2 = [6,7,8,9,10];
+const concat3 = concat1.concat(concat2, 11,12);
+console.log(concat3);
+
+// slice() method = syntax slice(firstIndex, secondIndex)
+// firsIndex = included not deleted
+// secondIndex = excluded, deleted
+// slice method not modify original array
+const slice1 = [1,2,3,4,5,6,7,8,9,10];
+const slice3 = slice1.slice(2,4);
+console.log(slice3);
+
+// index of 2 is 3 and included not delete
+// index of 4 is 5 and is excluded which is deleted
+const slice2 = slice1.slice(2, 4);
+console.log(slice2);
+console.log(slice1);
+
+// splice() method
+const splice1 = [1,2,3,4,5,6,7];
+splice1.splice(1,3,23,23,12);
+console.log(splice1);
+
+// indexOf() method

@@ -319,12 +319,26 @@ const object7 = {
     name: 'apple',
     age: 22,
     color: 'green',
-    gred: 'AA',
+    gred: [
+        {
+            A : 1,
+        },
+        {
+            A : 2,
+        },
+        {
+            A : 3,
+        }
+    ],
     origin: 'western'
 };
 
 for(let v in object7){
     console.log(object7[v] + " ")
+};
+
+for(let cc in object7.gred){
+    console.log(object7.gred[cc].A);
 };
 
 // DELETE IN OBJECT
@@ -344,3 +358,38 @@ console.log(a.name + ' is gred ' + a.gred + ' from ' + a.origin );
 console.log(a);
 
 // NESTED OBJECT
+const nestedObject1 = {
+    name: 'apple',
+    gred: 'AA',
+    color: 'red',
+    origin: {
+        western: 'britain',
+        eastern: 'egypt',
+        southEast: 'malaysia'
+    }
+};
+
+const aa = nestedObject1;
+console.log(aa['origin']['southEast']);
+console.log(aa.origin.eastern);
+
+// NESTED OBJECT AND ARRAY
+const objectArray1 = {
+    name: 'Amin',
+    age: 22,
+    cars: [
+        {name: 'perodua', models: ['myvi', 'axia', 'alza']},
+        {name: 'mazda', models: ['mazda1', 'mazda3', 'mazda6']},
+        {name: 'mercedes', models: ['merc1', 'merc2', 'merc3']},
+    ]
+}
+
+const car = objectArray1;
+
+for(let i in car.cars){
+    console.log(car.cars[i].name),
+    console.log(car.cars[i]['models']),
+    console.log(car.cars[i]['models'][0]),
+    console.log(car.cars[1]),
+    console.log(car.cars[i])
+}

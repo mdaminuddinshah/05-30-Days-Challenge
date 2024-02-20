@@ -155,8 +155,9 @@ const getIdImg = () => {
         squidwardimg.setAttribute('src', spongebobImg);
     }
 
-
-// array
+// ARRAY
+// ARRAY
+// ARRAY
 const fruits = ['apple', 'orange', 'banana', 'pear'];
 console.log(fruits);
 
@@ -207,7 +208,7 @@ const concat2 = [6,7,8,9,10];
 const concat3 = concat1.concat(concat2, 11,12);
 console.log(concat3);
 
-// slice() method = syntax slice(firstIndex, secondIndex)
+// slice() method = syntax slice(firstIndexIncluded, secondIndexExcluded)
 // firsIndex = included not deleted
 // secondIndex = excluded, deleted
 // slice method not modify original array
@@ -222,8 +223,124 @@ console.log(slice2);
 console.log(slice1);
 
 // splice() method
+// syntax = splice(startIndex, deletedCount)
 const splice1 = [1,2,3,4,5,6,7];
 splice1.splice(1,3,23,23,12);
 console.log(splice1);
 
 // indexOf() method
+// syntax = indexOf(searchElement, startIndexForSearch)
+const indexof = [12,34,12,55,34,75];
+const indexof1  = indexof.indexOf(34, 3);
+const indexof2 = indexof.indexOf(12, 3);
+console.log(indexof1);
+console.log(indexof2);
+
+// filter() method
+// filter syntax = filter(callback(element, index, array))
+const filter1 = [1,2,3,4,5,6,7,8,9,10];
+const filter2 = filter1.filter((elem, indx, array) => elem == array[2] );
+const filter3 = filter1.filter((elem, indx, array) => elem );
+const filter4 = filter1.filter((elem, indx, array) => indx % 2 == 0);
+
+console.log(filter2);
+console.log(filter3);
+console.log(filter4);
+
+// map method = create new array
+// syntax = map(callback(currentValue, index, array))
+const map1 = [1,2,3,4,5,6,7,8,9];
+const mp2 = map1.map((num,index) => num * 1);
+map1.map((num, index) => {console.log(num)});
+const map3 = map1.map((num) => num);
+console.log(map3);
+console.log(mp2);
+
+// forEach() method
+// syntax = arr.forEach(callback(currentValue, index, array))
+// not modify nor create array
+const each1 = [1,2,3,4,5,6,7,8,9];
+each1.forEach((num, index) => {console.log(`${index}: ${num}`)});
+
+// OBJECT
+// OBJECT
+// OBJECT
+
+// object literal
+const object1 = {name: 'orange', color: 'orange', age: '2 months'};
+console.log(object1);
+
+// object literal : empty object
+const object2 = {};
+object2.name = "apple";
+object2.color = 'red';
+object2.age = '3 months';
+console.log(object2);
+
+// new Object()
+// rarely use this new Object, for simplicity just use object literals
+const object3 = new Object();
+object3.name = 'pear';
+object3.age = '4 months';
+object3.color = 'green';
+console.log(object3);
+
+// object is mutable
+const object5 = {
+    name: 'amin',
+    age: 22,
+    food: 'mango'
+};
+
+console.log(
+    object5.name + ' very like ' + object5.food
+)
+
+// change object5
+const x = object5;
+x.name = 'hanim';
+x.food = 'pineapple';
+
+console.log(object5.name + ' very love ' + object5.food);
+
+// accessing object properties
+const object6 = {
+    name: 'watermelon',
+    age: '3 months',
+    color: 'yellow and green'
+};
+
+// access object6 
+console.log(object6.name);
+console.log(object6['name']);
+
+// for .. in loop
+const object7 = {
+    name: 'apple',
+    age: 22,
+    color: 'green',
+    gred: 'AA',
+    origin: 'western'
+};
+
+for(let v in object7){
+    console.log(object7[v] + " ")
+};
+
+// DELETE IN OBJECT
+const object8 = {
+    name: 'apple',
+    gred: 'AB',
+    color: 'greenlight',
+    origin: 'eastern'
+};
+const a = object8;
+console.log(a)
+console.log(a.name + ' is gred ' + a.gred + ' from ' + a.origin );
+
+// delete
+delete a.origin;
+console.log(a.name + ' is gred ' + a.gred + ' from ' + a.origin );
+console.log(a);
+
+// NESTED OBJECT

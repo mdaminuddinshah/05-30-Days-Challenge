@@ -393,3 +393,68 @@ for(let i in car.cars){
     console.log(car.cars[1]),
     console.log(car.cars[i])
 }
+
+// this keyword = use for object 
+// we use indices for array and this for object
+
+// use this in method, constructor function, event handlers
+
+// OBJECT METHOD
+
+// access objcet method using invoke from outside
+const objectMethod1= {
+    name: 'apple',
+    color: 'green',
+    gred: 'B',
+    origin: [
+        {place: 'north-east'},
+        {place: 'western'},
+        {place: 'eastern'}
+    ],
+    title: function(){
+        console.log(`this ${this.name} is gred ${this.gred} and from ${this.origin[1].place}`)
+    }
+}
+
+objectMethod1.title();
+
+// access object method using return
+const objectMethod2 = {
+    name: [
+        'apple', 'pear', 'mango', 'lemon'
+    ],
+    color: 'green',
+    gred: [
+        'B', 'A', 'C'
+    ],
+    origin: [
+        {place: 'north-east'},
+        {place: 'western'},
+        {place: 'eastern'}
+    ],
+    title: function(){
+        return `this ${this.name[2]} is gred ${this.gred[2]} and from ${this.origin[2].place}`
+    }
+}
+console.log(objectMethod2.title());
+
+// add method to existing object
+const object10 = {
+    color: 'green',
+    gred: [
+        'B', 'A', 'C'
+    ],
+    origin: [
+        {place: 'north-east'},
+        {place: 'western'},
+        {place: 'eastern'}
+    ],
+};
+
+// create method outside object
+object10.name = function(){
+    return this.origin[1].place +" and "+ this.origin[2].place
+};
+
+console.log(object10.name());
+

@@ -518,3 +518,15 @@ const w2 = {
 };
 
 console.log(JSON.stringify(w2.origin));
+
+// JAVASCRIPT ACCESSORS ( GETTERS & SETTERS )
+const gg = {
+    name: 'mango',
+    origin: 'thailand',
+    get quality(){
+        return "this " + this.name + " is from " + this.origin
+    }
+}
+document.getElementById('pp').textContent = gg.quality;
+
+

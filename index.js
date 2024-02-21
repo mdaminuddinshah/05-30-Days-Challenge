@@ -458,3 +458,63 @@ object10.name = function(){
 
 console.log(object10.name());
 
+// Display object with 4 ways:
+// with properties
+// with for..in loop
+// with Object.values()
+// with JSON.Stringify()
+
+// display with properties
+const p = {
+    name: 'apple',
+    origin: 'northeast',
+    color: 'red'
+};
+
+console.log(p.name);
+
+// display with for..in loop
+const qq = {
+    name: 'pear',
+    origin: 'australia',
+    color: 'green',
+    gred: {
+        name: 'ab',
+        brand: 'cd',
+        quality: 'd'
+
+    }
+};
+
+for(let i in qq.gred){
+    document.getElementById('pp').textContent += " " + qq.gred[i] + " ";
+}
+
+// display with Object.values()
+const w1 = {
+    name: 'watermelon',
+    origin: 'thailand',
+    color: 'green-yellow',
+    taste: {
+        1: 'sweet',
+        2: 'sour',
+        3: 'no taste'
+    }
+};
+
+console.log(Object.values(w1.taste));
+document.getElementById('pp').textContent = Object.values(w1.taste);
+
+// display with JSON.Stringify()
+const w2 = {
+    name: "apple",
+    origin: {
+        A: "north-east",
+        B: "western",
+        C: "south-east",
+        D: "east-blue",
+        E: "water-seven"
+    }
+};
+
+console.log(JSON.stringify(w2.origin));

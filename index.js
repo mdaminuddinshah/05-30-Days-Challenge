@@ -520,6 +520,7 @@ const w2 = {
 console.log(JSON.stringify(w2.origin));
 
 // JAVASCRIPT ACCESSORS ( GETTERS & SETTERS )
+// GETTER
 const gg = {
     name: 'mango',
     origin: 'thailand',
@@ -529,4 +530,70 @@ const gg = {
 }
 document.getElementById('pp').textContent = gg.quality;
 
+// SETTER
+const setterGoal = {
+    name: 'apple',
+    set Nama(val){
+        return this.name = val;
+    }
+}
+
+setterGoal.Nama = 'pear';
+console.log(setterGoal.name);
+
+// JAVASCRIPT OBJECT CONSTRUCTOR
+// create function for object 
+function object11(nama, tahun, tempatan){  //letak value sebagai parameter
+
+    // setkan property = value
+    this.name = nama;
+    this.umur = tahun;
+    this.buah = tempatan
+}
+
+// create object constructor 
+const object12 = new object11('amin', 21, 2024, 'johor');
+console.log(object12.name +" "+object12.buah);
+
+// create multiple of obtject constructor
+// 1st : create function for object constructor
+function multipleobject(a,b,c,d){
+    this.aa = a,
+    this.bb = b,
+    this.cc = c,
+    this.dd = d
+}
+
+// create object constructor
+const objectConstructor1 = new multipleobject(1,2,3,4);
+const objectConstructor2 = new multipleobject('spiderman', 'batman', 'superman', 'kluangman');
+
+console.log(objectConstructor2.aa);
+
+// SPREAD OPERATOR ...
+const aaa = [1,2,3,4];
+const aaa1 = [0,...aaa, 5,6];
+console.log(aaa1);
+
+const aaa2 = (...args) => {
+    console.log(args)
+}
+
+aaa2(1,2,3);
+
+const bbb1 = {a:1, b:2, c:3};
+const bbb2 = {...bbb1, d:4};
+console.log(bbb2);
+
+const aaa3 = ['jan','feb','mac','april'];
+const aaa4 = ['may', 'jun', 'july'];
+const aaa5 = ['aug', 'sept', 'oct', 'nov', 'dec'];
+const aaa6 = [...aaa3,...aaa4,...aaa5];
+console.log(aaa6);
+
+const aaa7 = [12,42,912,3923,42983,31932,1233];
+const aaa8 = Math.max(...aaa7);
+console.log(aaa8);
+
+// for ...of loop
 

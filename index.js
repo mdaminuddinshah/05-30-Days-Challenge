@@ -260,7 +260,7 @@ console.log(mp2);
 // syntax = arr.forEach(callback(currentValue, index, array))
 // not modify nor create array
 const each1 = [1,2,3,4,5,6,7,8,9];
-each1.forEach((num, index) => {console.log(`${index}: ${num}`)});
+each1.forEach((elem, index) => {console.log(`${index}: ${elem}`)});
 
 // OBJECT
 // OBJECT
@@ -570,6 +570,7 @@ const objectConstructor2 = new multipleobject('spiderman', 'batman', 'superman',
 
 console.log(objectConstructor2.aa);
 
+// ES6
 // SPREAD OPERATOR ...
 const aaa = [1,2,3,4];
 const aaa1 = [0,...aaa, 5,6];
@@ -595,5 +596,129 @@ const aaa7 = [12,42,912,3923,42983,31932,1233];
 const aaa8 = Math.max(...aaa7);
 console.log(aaa8);
 
-// for ...of loop
+// for ...of loop 
+// for of loop: array
+const ofLoop = ['apple', 'pear', 'grape'];
+for(let i of ofLoop){
+    document.getElementById('pp').textContent += ' ' + i;
+    console.log(i);
+}
 
+// for loop: string
+const character = 'aminuddin';
+for(let i of character){
+    document.getElementById('pp').textContent += ' ' + i + ',' ;
+    console.log(i);
+}
+
+// MAPS OBJECTS
+const map2 = new Map ([
+    ['name','apple'],
+    ['brand', 'thaibat'],
+    ['quality', 1],
+    ['origin', 'western']
+])
+
+console.log(map2.get('brand'));
+map2.set('brand', 'hermes');
+console.log(map2.get('brand'));
+
+// set() method for map object
+const map4 = new Map();
+map4.set('name', 'pear');
+
+console.log(map4.get('name'));
+
+// map.size: index start from 0
+const map5 = new Map([
+    ['name', 'apple'],
+    ['brand', 'good'],
+    ['quality', 1]
+]);
+
+console.log(map5.size);
+
+// Map.delete() method
+const map6 = new Map([
+    ['name', 'apple'],
+    ['brand', 'terbaik'],
+    ['quality', 1]
+]);
+
+console.log(map6.size);
+console.log(map6.delete('name'));
+console.log(map6.size);
+
+// Map.clear(): removes all elements
+const map7 = new Map([
+    ['name', 'apple'],
+    ['age', 2],
+    ['as', 1]
+])
+
+console.log(map7.size);
+console.log(map7.clear());
+console.log(map7.size);
+
+// Map.has() method
+const map8 = new Map([
+    ['name', 12],
+    ['age', 21],
+    ['quality', 23]
+]);
+
+console.log(map8.has('name'));
+console.log(map8.delete('name'));
+console.log(map8.has('name'));
+
+// forEach(value, index)
+
+const map9 = new Map([
+    ['apple', 2],
+    ['pear', 3],
+    ['mango', 4],
+    ['grape', 1]
+])
+
+map9.forEach((value, index) => {
+    console.log(`${index}: ${value}`);
+    document.getElementById('pp').textContent += `[ ${index}: ${value} ]`; 
+})
+
+
+// The entries() method returns an iterator object with the [key,values] in a Map:
+const map10 = new Map([
+    ["name", 12],
+    ["quality", 133],
+    ["brand", 214]
+]);
+
+let sd = "";
+for(let i of map10.entries()){
+    console.log(i.entries());
+    sd += i + " ";
+    
+}
+document.getElementById('pp').textContent = sd;
+
+// The keys() method returns an iterator object with the keys in a Map:
+const map11 = new Map([
+    ["name", 12],
+    ["quality", 133],
+    ["brand", 214]
+]);
+
+for(let i of map11.keys()){
+    document.getElementById('pp').textContent += i  + ' ';
+}
+
+// The values() method returns an iterator object with the values in a Map:
+const map12 = new Map([
+    ["name", 12],
+    ["quality", 133],
+    ["brand", 214]
+]);
+
+for(let i of map12.values()){
+    document.getElementById('pp').textContent += i + ' ';
+}
